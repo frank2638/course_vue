@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解构赋值</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    //1.模式匹配
+    let [a,b,c] = [10,20,30]
+    console.log('a=' + a)
+    console.log('b=' + b)
+    console.log('c=' + c)
+
+    //2.数组嵌套方式
+    let [a1,[[b1],c1]] = [1,[[2],3]]
+    console.log('a1=' + a1)
+    console.log('b1=' + b1)
+    console.log('c1=' + c1)
+
+    //3.不完全解构
+    let [a2, ,c2] = [1,2,3]
+    console.log('a2=' + a2)
+    console.log('c2=' + c2)
+
+    let [a3,b3,c3] = [10,30]
+    console.log('a3=' + a3) 
+    console.log('b3=' + b3) 
+    console.log('c3=' + c3) 
+
+
+    //4.使用扩展运算符解构
+
+
+    //5.含有默认值的解构
+    let [a5 = 1, b5 = 20, c5 = 30] = [10, undefined];
+    console.log('a5=' + a5)
+    console.log('b5=' + b5)
+    console.log('c5=' + c5)
+
+
+</script>
+</html>

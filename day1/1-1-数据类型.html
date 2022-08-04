@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    ///////一、简单数据类型///////
+    //1.字符串类型String
+    var name = '张三'
+
+    //2.数字类型（Number）
+    var age = 80
+
+    //3.underfined类型（未说明）
+    var salary = undefined
+
+    //4.null类型
+    var sex = null
+
+    //5.布尔类型（Boolean）
+    var married = false
+
+    //6.Symbol类型（独一无二）
+    var symbolA = Symbol('说明1')
+    var symbolB = Symbol('说明1')
+
+    //7.大整数(bigInt)
+    var idcard = 341182199208013456
+    var idcard2 = 341182199201023456n
+
+    console.log(symbolA == symbolB)
+    console.log(idcard)
+    console.log(idcard2+1n)
+
+    ///////二、复杂数据类型///////
+    //1.对象 属性名：属性值  属性名：函数
+    var obj = {
+        name: '张三',
+        age: 99,
+        sing: function(){
+            console.log('好听')
+        }
+
+    }
+
+    //2.数组
+    var books = ['语文','数学']
+
+    //3.函数，变量函数
+    var add = function(num1,num2){
+        return num1 + num2
+    }
+    console.log(add(1,3))
+
+    // add函数(add方法)
+    function add2(num1,num2){
+        return num1 + num2
+    }
+    console.log(add2(4,8))
+
+    //4.日期
+    var date1 = new Date()
+    console.log(date1.getFullYear())
+
+    //5.Map
+    var map1 = new Map()
+    map1.set('name','张三')
+    map1.set('age',90)
+    console.log(map1)
+
+    //6.Set
+    var set = new Set()
+    set.add('张三')
+    set.add('李四')
+    set.add('王让人2333ß')
+
+
+    console.log(set)
+
+    //7.RegExp
+
+
+
+
+
+</script>
+</body>
+</html>

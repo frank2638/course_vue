@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise对象</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    //1.创建Promise对象，并执行异步处理业务
+    let p1 = new Promise(
+        function (resolve,reject) {
+            //这里写异步处理......
+            console.log('1.异步业务处理中');
+            let flag = false
+            if (flag){
+                resolve("3...API返回的成功消息");
+            } else {
+                reject("3...API返回的失败消息");
+            }
+        }
+    );
+
+    let p2 = p1.then(
+        res => {
+             abc();//故意搞一个异常
+            console.log(res);
+        },
+        rej => {
+            // abc(); //故意搞一个异常
+            console.log('aaa')
+            console.log(rej);
+        }
+    )
+
+    //3.调用catch方法，捕获异常
+    let p3 = p2.catch(
+        () => {
+            console.log('有异常');
+        }
+    )
+
+    console.log('2......')
+
+</script>
+</html>
